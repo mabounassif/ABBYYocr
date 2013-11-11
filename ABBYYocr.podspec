@@ -6,4 +6,6 @@ Pod::Spec.new do |s|
   s.author       = { "Mahmoud Abounassif" => "mahmoud.abounassif@gmail.com" }
   s.source_files = "*.{h,m}", "iPhone/**/*.{h,m}", "iPhoneSimulator/**/*.{h,m}"
   s.ios.vendored_library = "libAbbyyMsdk.a"
+  s.source = {:git => 'https://github.com/mabounassif/ABBYYocr.git'}
+  s.homepage = "www.mahmoud.ca"
 end
