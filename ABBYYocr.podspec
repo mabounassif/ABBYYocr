@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name            = "ABBYYocr"
-  s.version         = "0.0.5"
+  s.version         = "0.0.1"
   s.summary         = "A native iOS API for ABBYY's ocr technology'"
   s.license         = "Contact ABBYY"
   s.author          = { "Mahmoud Abounassif" => "mahmoud.abounassif@gmail.com" }
