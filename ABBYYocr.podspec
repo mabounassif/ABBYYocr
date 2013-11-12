@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.source          = { :git => 'git@github.com:mabounassif/ABBYYocr.git', :tag => s.version.to_s }
 
   s.source_files    = '*.h'
-  s.preserve_path   = '*.a'
+  s.preserve_paths = 'libAbbyyMsdk.a'
   s.requires_arc    = true
 
   s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => "$(PODS_ROOT)/ABBYYocr",
