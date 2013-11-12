@@ -1,12 +1,15 @@
 Pod::Spec.new do |s|
-  s.name         = "ABBYYocr"
-  s.version      = "0.0.5"
-  s.summary      = "A native iOS API for ABBYY's ocr technology'"
-  s.license      = "Contact ABBYY"
-  s.author       = { "Mahmoud Abounassif" => "mahmoud.abounassif@gmail.com" }
-  s.source_files = "*.{h,m}", "iPhone/**/*.{h,m}", "iPhoneSimulator/**/*.{h,m}"
-  s.ios.vendored_library = "libAbbyyMsdk.a"
-  s.source = {:git => 'https://github.com/mabounassif/ABBYYocr.git', :tag => 'v0.0.5'}
-  s.homepage = "www.mahmoud.ca"
-  s.xcconfig  =  { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/ABBYYocr"' }
+  s.name            = "ABBYYocr"
+  s.version         = "0.0.5"
+  s.summary         = "A native iOS API for ABBYY's ocr technology'"
+  s.license         = "Contact ABBYY"
+  s.author          = { "Mahmoud Abounassif" => "mahmoud.abounassif@gmail.com" }
+  s.source          = { :git => 'git@github.com:mabounassif/ABBYYocr.git', :tag => s.version.to_s }
+
+  s.source_files    = '*.h'
+  s.preserve_path   = '*.a'
+  s.requires_arc    = true
+
+  s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => "$(PODS_ROOT)/ABBYYocr",
+                    'OTHER_LINKER_FLAGS' => "$(PODS_ROOT)/ABBYYocr/libAbbyyMsdk.a"}
 end
